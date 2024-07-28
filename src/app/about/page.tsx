@@ -49,6 +49,7 @@ const AboutPage = () => {
         <p className="mb-4">
           Take our pre-launch survey to help ensure Study Abroad Compass addresses real student challenges.
         </p>
+        
         <div className="flex flex-wrap gap-2 mb-4">
           <Badge variant="secondary">Early Access</Badge>
           <Badge variant="secondary">Exclusive Resources</Badge>
@@ -68,7 +69,7 @@ const AboutPage = () => {
           Join us in revolutionizing study abroad decision-making. Your adventure awaits!
         </p>
         <p className="font-semibold">
-          Study Abroad Compass Team
+        Made by Danish Tiwari and Aurelius Nyugen
         </p>
       </section>
     </div>
