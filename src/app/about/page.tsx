@@ -69,7 +69,7 @@ const AboutPage = () => {
           Join us in revolutionizing study abroad decision-making. Your adventure awaits!
         </p>
         <p className="font-semibold">
-        Made by Danish Tiwari and Aurelius Nyugen
+        Made by Danish Tiwari and Aurelius Nguyen
         </p>
       </section>
     </div>
