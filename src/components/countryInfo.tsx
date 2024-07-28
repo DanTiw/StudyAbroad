@@ -123,11 +123,11 @@ const CountriesInfo: React.FC<CountryInfo> = ({
     }
   }
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
-      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">Country Information: {country}</h1>
+    <div className="container mx-auto px-4 py-8 max-w-7xl text-black">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center text-white">Country Information: {country}</h1>
       
-      <Tabs defaultValue="climate" className="w-full p-2">
-        <TabsList className="flex flex-wrap justify-center mb-6">
+      <Tabs defaultValue="climate" className="w-full p-2 ">
+        <TabsList className="flex flex-wrap justify-center mb-6   text-black-50">
           <TabsTrigger value="climate" className="mb-2 mr-2">Climate and Location</TabsTrigger>
           <TabsTrigger value="food" className="mb-2 mr-2">Food</TabsTrigger>
           <TabsTrigger value="living" className="mb-2 mr-2">Cost of Living</TabsTrigger>
@@ -137,12 +137,12 @@ const CountriesInfo: React.FC<CountryInfo> = ({
         </TabsList>
 
         <TabsContent value="climate">
-          <Card className="mb-6">
+          <Card className="mb-6 ">
             <CardHeader>
-              <CardTitle className="text-xl md:text-2xl">Climate and Location</CardTitle>
+              <CardTitle className="text-xl md:text-2xl flex justify-center ">Climate and Location</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="mb-4">{climate}</p>
+            <CardContent >
+              <p className="mb-4 flex justify-center ">{climate}</p>
               <WeatherInfo lon={lon} lat={lat} />
             </CardContent>
           </Card>
