@@ -2,29 +2,23 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-interface PopulationData {
-  totalPopulation: string;
-  density: string;
-  malePercentage: string;
-  femalePercentage: string;
-  medianAge: string;
-  urbanPopulation: string;
-  growthRate: string;
-}
+const PopulationUSA: React.FC = () => {
+  const populationData = {
+    totalPopulation: "341,558,784",
+density: "35.5r",
+malePercentage: "49.4%",
+femalePercentage: "50.6%",
+medianAge: "38.1",
+urbanPopulation: "284,698,234",
+growthRate: "0.53%"
+  };
 
-interface MapData {
-  mapsrc: string
-  src: string;
-  href: string;
-  title: string;
-}
+  const mapData = {
+    mapsrc: "https://maps.google.com/maps?q=united%20states&t=&z=5&ie=UTF8&iwloc=&output=embed",
+    href: "https://www.google.com/maps/place/United+States",
+    title: "United States"
+  };
 
-interface PopulationInfoProps {
-  populationData: PopulationData;
-  mapData: MapData;
-}
-
-const PopulationInfo: React.FC<PopulationInfoProps> = ({ populationData, mapData }) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 p-4 max-w-6xl mx-auto">
       <Card className="w-full md:w-1/2">
@@ -39,7 +33,6 @@ const PopulationInfo: React.FC<PopulationInfoProps> = ({ populationData, mapData
             src={mapData.mapsrc}
           ></iframe>
           <a href={mapData.href} className="text-sm text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">Map source</a>
-          <script type='text/javascript' src={mapData.src}></script>
         </CardContent>
       </Card>
       
@@ -67,4 +60,4 @@ const PopulationInfo: React.FC<PopulationInfoProps> = ({ populationData, mapData
   );
 };
 
-export default PopulationInfo;
+export default PopulationUSA;

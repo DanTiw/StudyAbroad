@@ -3,6 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import WeatherInfo from '@/components/weatherInfo';
 import PopulationInfo from '@/components/populationDensity';
+import PopulationUSA from './populations/populationUSA';
+import PopulationAUS from './populations/populationAUS';
+import PopulationUK from './populations/populationUK';
+import FoodUSA from '@/components/food/foodUSA';
+import FoodUK from '@/components/food/foodUK';
+import FoodAUS from '@/components/food/foodAUS';
+import SalaryUSA from '@/components/salaries/salaryUSA';
+import SalaryUK from './salaries/salaryUK';
+import SalaryAUS from './salaries/salaryAUS';
 
 interface Link {
   title: string;
@@ -26,6 +35,7 @@ interface PopulationData {
 }
 
 interface MapData {
+  mapsrc: string;
   src: string;
   href: string;
   title: string;
@@ -41,7 +51,7 @@ export interface CountryInfo {
   averageSalary: AverageSalary;
   populationData: PopulationData;
   mapData: MapData;
-  crime: string;
+ 
   links: Link[];
 }
 
@@ -52,12 +62,66 @@ const CountriesInfo: React.FC<CountryInfo> = ({
   climate,
   food,
   costOfLiving,
-  averageSalary,
+
   populationData,
   mapData,
-  crime,
+ 
   links
 }) => {
+  const getPopulationComponent = () => {
+    switch(country.toLowerCase()) {
+      case 'united states':
+        return <PopulationUSA />;
+      case 'australia':
+        return <PopulationAUS />;
+      case 'united kingdom':
+        return <PopulationUK />;
+      default:
+        return <PopulationInfo populationData={populationData} mapData={mapData} />;
+    }
+  }
+  const getFoodComponent = () => {
+    switch(country.toLowerCase()) {
+      case 'united states':
+        return <FoodUSA />;
+      case 'australia':
+        return <FoodAUS />;
+      case 'united kingdom':
+        return <FoodUK />;
+      default:
+        return (
+          <Card className="mb-6">
+            <CardHeader>
+              <CardTitle className="text-xl md:text-2xl">Food: Average Diet</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{food}</p>
+            </CardContent>
+          </Card>
+        );
+    }
+  }
+  const getSalaryComponent = () => {
+    switch(country.toLowerCase()) {
+      case 'united states':
+        return <SalaryUSA />;
+      case 'united kingdom':
+        return <SalaryUK />;
+      case 'australia':
+        return <SalaryAUS />;
+      default:
+        return (
+          <Card className="mb-6">
+            <CardHeader>
+              <CardTitle className="text-xl md:text-2xl">Salary Information Not Available</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>We don't have specific salary information for this country.</p>
+            </CardContent>
+          </Card>
+        );
+    }
+  }
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">Country Information: {country}</h1>
@@ -69,7 +133,6 @@ const CountriesInfo: React.FC<CountryInfo> = ({
           <TabsTrigger value="living" className="mb-2 mr-2">Cost of Living</TabsTrigger>
           <TabsTrigger value="salary" className="mb-2 mr-2">Average Salary</TabsTrigger>
           <TabsTrigger value="population" className="mb-2 mr-2">Population</TabsTrigger>
-          <TabsTrigger value="crime" className="mb-2 mr-2">Crime</TabsTrigger>
           <TabsTrigger value="links" className="mb-2">Popular Links</TabsTrigger>
         </TabsList>
 
@@ -86,14 +149,7 @@ const CountriesInfo: React.FC<CountryInfo> = ({
         </TabsContent>
 
         <TabsContent value="food">
-          <Card className="mb-6">
-            <CardHeader>
-              <CardTitle className="text-xl md:text-2xl">Food: Average Diet</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>{food}</p>
-            </CardContent>
-          </Card>
+          {getFoodComponent()}
         </TabsContent>
 
         <TabsContent value="living">
@@ -113,29 +169,16 @@ const CountriesInfo: React.FC<CountryInfo> = ({
               <CardTitle className="text-xl md:text-2xl">Average Salary</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc pl-5">
-                <li>50th percentile: {averageSalary.percentile50}</li>
-                <li>25th percentile: {averageSalary.percentile25}</li>
-                <li>75th percentile: {averageSalary.percentile75}</li>
-              </ul>
+              <p>{getSalaryComponent()}</p>
             </CardContent>
           </Card>
         </TabsContent>
 
         <TabsContent value="population">
-          <PopulationInfo populationData={populationData} mapData={mapData} />
+          {getPopulationComponent()}
         </TabsContent>
 
-        <TabsContent value="crime">
-          <Card className="mb-6">
-            <CardHeader>
-              <CardTitle className="text-xl md:text-2xl">Crime</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>{crime}</p>
-            </CardContent>
-          </Card>
-        </TabsContent>
+      
 
         <TabsContent value="links">
           <Card className="mb-6">
@@ -146,7 +189,7 @@ const CountriesInfo: React.FC<CountryInfo> = ({
               <ul className="list-disc pl-5">
                 {links.map((link, index) => (
                   <li key={index} className="mb-2">
-                    <a href={link.url} className="text-blue-600 hover:underline break-words">{link.title}</a>
+                    <a href={link.url} target="_blank" className="text-blue-600 hover:underline break-words">{link.title}</a>
                   </li>
                 ))}
               </ul>

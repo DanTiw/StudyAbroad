@@ -1,9 +1,8 @@
 
 import CountriesInfo, { CountryInfo } from '@/components/countryInfo';
-import WeatherInfo from '@/components/weatherInfo';
+
 import USACostOfLiving from '@/components/costOfLiving/costOfLiving';
-import PopulationInfo from '@/components/populationDensity';
-import { useEffect, useState } from 'react';
+
 
 export default  function USA() {
  
@@ -18,12 +17,13 @@ export default  function USA() {
   };
 
   const usaMapData = {
+    mapsrc:"https://maps.google.com/maps?width=621&amp;height=549&amp;hl=en&amp;q=%20USA+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed",
     src: "http://mapseinbindung.com/'>www.mapseinbindung.com",
     href: "https://embedmaps.com/google-maps-authorization/script.js?id=e8924c316a319e4ef11fa2b986b01a044a3bc417%27%3E",
     title: "USA"
   };
   const countryData: CountryInfo = {
-    country: "USA",
+    country: "United States",
     lat: 10.99,
     lon: 44.34,
     climate: "Temperate climate with four distinct seasons.",
@@ -37,11 +37,11 @@ export default  function USA() {
     },
     populationData: usaPopulationData,
     mapData: usaMapData,
-    crime: "The crime rate is relatively low...",
+    
     links: [
-      { title: "Visa Application Guide", url: "#" },
-      { title: "Scholarship Information", url: "#" },
-      { title: "Tourism Board", url: "#" }
+      { title: "Visa Application Guide", url: "https://www.usa.gov/tourist-visa" },
+      { title: "Scholarship Information", url: "https://www.scholars4dev.com/6499/scholarships-in-usa-for-international-students/" },
+      { title: "Tourism Board", url: "https://www.visittheusa.com/" }
     ]
   };
 

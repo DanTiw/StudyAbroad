@@ -1,55 +1,58 @@
+
+
 import React from 'react';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
 const AustraliaCostOfLivingList = () => {
   const data = {
     "Country Name": "Australia",
-    "Cost of Living Month Total": "1427.37",
-    "Currency": "USD",
-    "Note": "Total cost of living in Australia for two person with average consumption for one month will be 1427.37 USD, no rent price included",
+    "Cost of Living Month Total": "2141.06",
+    "Currency": "AUD",
+    "Note": "Total cost of living in Australia for two person with average consumption for one month will be 2141.06 AUD, no rent price included",
     "Categories": [
       {
         name: "Restaurants",
         items: [
-          { cost: "Meal in Inexpensive Restaurant", value: "13.42" },
-          { cost: "Meal for 2 People, Mid-range Restaurant, Three-course", value: "59.62" },
-          { cost: "McMeal at McDonalds or Alternative Combo Meal", value: "7.46" },
-          { cost: "Domestic Beer, 0.5 liter Draught", value: "5.21" },
-          { cost: "Imported Beer, 0.33 liter Bottle", value: "5.96" },
-          { cost: "Cappuccino", value: "3.15" },
-          { cost: "Coca-Cola, 0.33 liter Bottle", value: "2.36" }
+          { cost: "Meal in Inexpensive Restaurant", value: "20.13" },
+          { cost: "Meal for 2 People, Mid-range Restaurant, Three-course", value: "89.43" },
+          { cost: "McMeal at McDonalds or Alternative Combo Meal", value: "11.19" },
+          { cost: "Domestic Beer, 0.5 liter Draught", value: "7.82" },
+          { cost: "Imported Beer, 0.33 liter Bottle", value: "8.94" },
+          { cost: "Cappuccino", value: "4.73" },
+          { cost: "Coca-Cola, 0.33 liter Bottle", value: "3.54" }
         ]
       },
       {
         name: "Markets",
         items: [
-          { cost: "Milk, Regular,1 liter", value: "1.06" },
-          { cost: "Loaf of Fresh White Bread, 0.5 kg", value: "1.90" },
-          { cost: "White Rice, 1 kg", value: "1.99" },
-          { cost: "Eggs, 12 pack", value: "3.29" },
-          { cost: "Local Cheese, 1 kg", value: "6.80" },
-          { cost: "Chicken Breasts, Boneless and Skinless, 1 kg", value: "7.49" },
-          { cost: "Beef Round or Equivalent Back Leg Red Meat, 1 kg", value: "11.31" }
+          { cost: "Milk, Regular,1 liter", value: "1.59" },
+          { cost: "Loaf of Fresh White Bread, 0.5 kg", value: "2.85" },
+          { cost: "White Rice, 1 kg", value: "2.99" },
+          { cost: "Eggs, 12 pack", value: "4.94" },
+          { cost: "Local Cheese, 1 kg", value: "10.20" },
+          { cost: "Chicken Breasts, Boneless and Skinless, 1 kg", value: "11.24" },
+          { cost: "Beef Round or Equivalent Back Leg Red Meat, 1 kg", value: "16.97" }
         ]
       },
       {
         name: "Transportation",
         items: [
-          { cost: "One-way Ticket, Local Transport", value: "2.98" },
-          { cost: "Monthly Pass, Regular Price", value: "104.33" },
-          { cost: "Taxi Start, Normal Tariff", value: "2.98" },
-          { cost: "Gasoline, 1 liter", value: "0.99" }
+          { cost: "One-way Ticket, Local Transport", value: "4.47" },
+          { cost: "Monthly Pass, Regular Price", value: "156.50" },
+          { cost: "Taxi Start, Normal Tariff", value: "4.47" },
+          { cost: "Gasoline, 1 liter", value: "1.49" }
         ]
       },
       {
         name: "Utilities (Monthly)",
         items: [
-          { cost: "Basic utilities for 85m2 Apartment including Electricity, Heating or Cooling, Water and Garbage", value: "147.96" },
-          { cost: "Internet, 60 Mbps or More, Unlimited Data, Cable/ADSL", value: "54.07" }
+          { cost: "Basic utilities for 85m2 Apartment including Electricity, Heating or Cooling, Water and Garbage", value: "221.94" },
+          { cost: "Internet, 60 Mbps or More, Unlimited Data, Cable/ADSL", value: "81.11" }
         ]
       }
     ]
   };
+
 
   return (
     <div className="p-4 max-w-4xl mx-auto">

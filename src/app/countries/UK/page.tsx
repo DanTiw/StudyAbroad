@@ -7,9 +7,22 @@ import { useEffect, useState } from 'react';
 
 export default  function UK() {
  
+  const ausPopulationData = {
+    totalPopulation: "331651",
+    density: "36",
+    malePercentage: "49.2%",
+    femalePercentage: "50.8%",
+    medianAge: "38.1",
+    urbanPopulation: "82.7%",
+    growthRate: "0.1%"
+  };
 
+  const ausMapData = {
+    src: "http://mapseinbindung.com/",
+    title: "United Kingdom"
+  };
   const countryData: CountryInfo = {
-    country: "UK",
+    country: "United Kingdom",
     lat: 10.99,
     lon: 44.34,
     climate: "Temperate climate with four distinct seasons.",
