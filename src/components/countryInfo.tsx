@@ -126,7 +126,7 @@ const CountriesInfo: React.FC<CountryInfo> = ({
     <div className="container mx-auto px-4 py-8 max-w-7xl">
       <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">Country Information: {country}</h1>
       
-      <Tabs defaultValue="climate" className="w-full">
+      <Tabs defaultValue="climate" className="w-full p-2">
         <TabsList className="flex flex-wrap justify-center mb-6">
           <TabsTrigger value="climate" className="mb-2 mr-2">Climate and Location</TabsTrigger>
           <TabsTrigger value="food" className="mb-2 mr-2">Food</TabsTrigger>

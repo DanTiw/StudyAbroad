@@ -24,8 +24,8 @@ export default  function USA() {
   };
   const countryData: CountryInfo = {
     country: "United States",
-    lat: 10.99,
-    lon: 44.34,
+    lat:  38.889805,
+    lon:  -77.009056,
     climate: "Temperate climate with four distinct seasons.",
     food: "The average diet consists of...",
     //@ts-ignore

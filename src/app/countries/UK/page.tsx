@@ -23,8 +23,8 @@ export default  function UK() {
   };
   const countryData: CountryInfo = {
     country: "United Kingdom",
-    lat: 10.99,
-    lon: 44.34,
+    lat: 51.509865,
+    lon: -0.118092,
     climate: "Temperate climate with four distinct seasons.",
     food: "The average diet consists of...",
     //@ts-ignore
@@ -37,9 +37,9 @@ export default  function UK() {
     populationDensity: "The population density is approximately...",
     crime: "The crime rate is relatively low...",
     links: [
-      { title: "Visa Application Guide", url: "#" },
-      { title: "Scholarship Information", url: "#" },
-      { title: "Tourism Board", url: "#" }
+      { title: "Visa Application Guide", url: "https://www.gov.uk/government/publications/visitor-visa-guide-to-supporting-documents" },
+      { title: "Scholarship Information", url: "https://study-uk.britishcouncil.org/scholarships-funding" },
+      { title: "Tourism Board", url: "https://www.visitbritain.com/en" }
     ]
   };
 

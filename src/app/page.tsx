@@ -34,11 +34,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="bg-gray-100 text-center py-4">
-        <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-          © 2023 Study Abroad Information
-        </a>
-      </footer>
+    
     </div>
   )
 }

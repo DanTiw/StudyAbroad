@@ -24,8 +24,8 @@ export default  function Australia() {
   };
   const countryData: CountryInfo = {
     country: "Australia",
-    lat: 10.99,
-    lon: 44.34,
+    lat:  -35.282001,
+    lon: 149.128998,
     climate: "Temperate climate with four distinct seasons.",
     food: "The average diet consists of...",
     //@ts-ignore
@@ -38,9 +38,9 @@ export default  function Australia() {
     populationDensity: "The population density is approximately...",
     crime: "The crime rate is relatively low...",
     links: [
-      { title: "Visa Application Guide", url: "#" },
-      { title: "Scholarship Information", url: "#" },
-      { title: "Tourism Board", url: "#" }
+      { title: "Visa Application Guide", url: "https://au.usembassy.gov/travel-and-visas-to-australia/" },
+      { title: "Scholarship Information", url: "https://www.studyaustralia.gov.au/en/plan-your-studies/scholarships" },
+      { title: "Tourism Board", url: "https://www.australia.com/en-us" }
     ]
   };
 
