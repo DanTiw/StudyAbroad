@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Merriweather({ subsets: ["latin"], weight:  ["700" ] });
 
 export const metadata: Metadata = {
-  title: "Study Abroad Information",
+  title: "Study Abroad Compass",
   description: "Find information about studying abroad",
 };
 

@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Study Abroad Information</title>
+        <title>Study Abroad Compass</title>
         <meta name="description" content="Find information about studying abroad" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex-grow container mx-auto px-4 py-8 ">
         <h1 className="text-4xl font-bold text-center mb-8">
-          Study Abroad Information
+          Study Abroad Compass
         </h1>
 
         <p className="text-xl text-center mb-12">
