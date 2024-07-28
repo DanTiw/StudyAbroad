@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="text-xl w-full px-3 py-2 rounded-md border-x-slate-950 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="text-xl text-black w-full px-3 py-2 rounded-md border-x-slate-950 focus:outline-none focus:ring-2 focus:ring-gray-500"
                 />
             </div>
             <div className="mb-4">
@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="text-xl w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="text-xl  text-black w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                 />
             </div>
             <div className="mb-4">
@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     rows={4}
-                    className="text-xl w-full px-3 py-2  rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="text-xl  text-black w-full px-3 py-2  rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                 ></textarea>
             </div>
             <button

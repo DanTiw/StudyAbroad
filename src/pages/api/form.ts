@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         try {
             await sql`
-        INSERT INTO contacts (name, email, message)
+        INSERT INTO contact_submissions (name, email, message)
         VALUES (${name}, ${email}, ${message})
       `;
 
